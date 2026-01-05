@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelinlik Beyaz Rüya | Cansu Hanım'a Özel Teklif</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        'gold-light': '#F3E5AB',
+                        charcoal: '#2C2C2C',
+                        cream: '#F9F9F7',
+                        softgray: '#F5F5F5'
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .hero-pattern {
+            background-color: #f9f9f9;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="font-sans text-charcoal antialiased bg-cream hero-pattern">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur transition-all duration-300 border-b border-gold/20">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- Logo Section -->
+            <div class="flex items-center gap-3">
+                <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 0L60 25L85 30L65 50L70 75L50 60L30 75L35 50L15 30L40 25L50 0Z" fill="#D4AF37" fill-opacity="0.2"/>
+                    <path d="M50 10C50 10 70 40 70 60C70 71.0457 61.0457 80 50 80C38.9543 80 30 71.0457 30 60C30 40 50 10 50 10Z" stroke="#D4AF37" stroke-width="2"/>
+                    <path d="M50 25C50 25 60 45 60 60C60 65.5228 55.5228 70 50 70C44.4772 70 40 65.5228 40 60C40 45 50 25 50 25Z" fill="#D4AF37"/>
+                </svg>
+                <div class="text-xl md:text-2xl font-serif font-semibold tracking-wider text-charcoal flex flex-col leading-none">
+                    <span class="text-xs text-gold tracking-[0.2em] font-sans mb-1">GELİNLİK</span>
+                    <span>BEYAZ RÜYA</span>
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-600 items-center">
+                <a href="#analiz" class="hover:text-gold transition">Analiz</a>
+                <a href="#strateji" class="hover:text-gold transition">6 Aylık Plan</a>
+                <a href="#kapsam" class="hover:text-gold transition">Hizmetler</a>
+                <a href="#fiyat" class="hover:text-gold transition font-bold text-gold">Paket & Fiyat</a>
+            </div>
+            
+            <!-- WhatsApp Button (Desktop) -->
+            <a href="https://wa.me/905079448462?text=Merhaba%20Semanur%20Han%C4%B1m%2C%20Gelinlik%20Beyaz%20R%C3%BCya%20projesi%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum." target="_blank" class="hidden md:inline-block px-6 py-2 bg-charcoal text-white text-xs tracking-widest uppercase hover:bg-gold transition duration-300">
+                <i class="fab fa-whatsapp mr-2"></i>İletişime Geç
+            </a>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-charcoal focus:outline-none p-2">
+                <i id="menu-icon" class="fas fa-bars text-xl transition-all duration-300"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Container (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gold/20 absolute w-full left-0 top-full shadow-lg">
+            <div class="flex flex-col p-6 space-y-4 text-center">
+                <a href="#analiz" class="text-charcoal hover:text-gold font-medium py-2 border-b border-gray-100">Analiz</a>
+                <a href="#strateji" class="text-charcoal hover:text-gold font-medium py-2 border-b border-gray-100">6 Aylık Plan</a>
+                <a href="#fiyat" class="text-charcoal hover:text-gold font-medium py-2 border-b border-gray-100">Paket & Fiyat</a>
+                
+                <a href="https://wa.me/905079448462?text=Merhaba%20Semanur%20Han%C4%B1m%2C%20Gelinlik%20Beyaz%20R%C3%BCya%20projesi%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum." target="_blank" class="px-6 py-3 bg-charcoal text-white text-xs tracking-widest uppercase hover:bg-gold transition duration-300 w-full inline-block">
+                    <i class="fab fa-whatsapp mr-2"></i>İletişime Geç
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <!-- Abstract Background Image Placeholder -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1594539659052-19e07297e20a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Wedding Texture" class="w-full h-full object-cover opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-cream/50 to-cream"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <!-- Personal Welcome Message -->
+            <div class="inline-block border border-gold/30 bg-white/80 backdrop-blur px-6 py-2 rounded-full mb-6 animate-fade-in-up shadow-sm">
+                <span class="text-charcoal text-sm font-medium">Sayın Cansu Hanım'a Özel Hazırlanmıştır</span>
+            </div>
+            
+            <h1 class="text-4xl md:text-7xl font-serif font-light mb-6 leading-tight text-charcoal">
+                Gelinlik Beyaz Rüya İçin <br> <span class="italic text-gold">Yeni Bir Dönem</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-gray-600 mb-10 text-base md:text-lg font-light leading-relaxed">
+                Markanızın potansiyeli çok yüksek. Gelinliklerinizin zarafetini doğru dijital stratejilerle buluşturarak,
+                daha fazla geline ulaşmak ve markanızı hak ettiği etkileşim seviyesine taşımak için buradayız.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#analiz" class="px-8 py-3 border border-charcoal text-charcoal hover:bg-charcoal hover:text-white transition duration-300 uppercase text-xs tracking-widest bg-white/50">
+                    Potansiyeli Keşfet
+                </a>
+                <a href="#fiyat" class="px-8 py-3 bg-gold text-white hover:bg-yellow-600 transition duration-300 uppercase text-xs tracking-widest shadow-lg shadow-gold/30">
+                    Özel Teklifi Gör
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Diagnosis Section (Positive Tone) -->
+    <section id="analiz" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-serif mb-6">Mevcut Durum: <span class="text-gold italic">"Keşfedilmeyi Bekleyen Cevher"</span></h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        @gelinlikbeyazruya hesabı, estetik açıdan güçlü bir temele sahip. Mevcut takipçi kitlenizle olan bağımızı güçlendirmek ve algoritmaya "biz buradayız" mesajını vermek için harika fırsatlarımız var.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="bg-gold/10 p-2 rounded-full mr-4 mt-1">
+                                <i class="fas fa-magic text-gold text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm uppercase text-charcoal">Fırsat 1: Kitleyi Aktive Etme</h4>
+                                <p class="text-xs text-gray-500">Mevcut takipçilerinize kendimizi tekrar hatırlatarak etkileşimi canlandırabiliriz.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gold/10 p-2 rounded-full mr-4 mt-1">
+                                <i class="fas fa-rocket text-gold text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm uppercase text-charcoal">Fırsat 2: Teknik Güçlendirme</h4>
+                                <p class="text-xs text-gray-500">2026 Meta altyapısı (Katalog, Business Suite) ile mağazanızı dijitalde de profesyonelleştireceğiz.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gold/10 p-2 rounded-full mr-4 mt-1">
+                                <i class="fas fa-heart text-gold text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm uppercase text-charcoal">Fırsat 3: Hikaye Odaklı İletişim</h4>
+                                <p class="text-xs text-gray-500">Ürün görsellerini, gelinlerin hayallerine dokunan hikayelerle süsleyerek çeşitlendireceğiz.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 relative mt-8 md:mt-0">
+                    <div class="glass-panel p-8 shadow-2xl relative z-10 rounded-lg">
+                        <div class="border-l-2 border-gold pl-6">
+                            <h3 class="text-xl font-serif text-charcoal mb-2">Hedefimiz</h3>
+                            <p class="text-3xl font-light text-gold italic">"Bağ Kuran Marka Olmak"</p>
+                            <p class="mt-4 text-sm text-gray-600">
+                                6 ay içinde hesabınızı, gelin adaylarının sadece model baktığı değil, hayallerini bulduğu ve güvenle iletişime geçtiği bir merkeze dönüştüreceğiz.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Decorative Element -->
+                    <div class="absolute -top-4 -right-4 w-24 h-24 bg-gold/10 rounded-full z-0"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6 Month Roadmap -->
+    <section id="strateji" class="py-20 bg-cream">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif text-charcoal">6 Aylık Gelişim Yolculuğu</h2>
+                <div class="w-24 h-1 bg-gold mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Phase 1 -->
+                <div class="bg-white p-8 shadow-lg border-t-4 border-gray-300 hover:border-gold transition duration-300 rounded-sm">
+                    <div class="text-4xl font-serif text-gold/30 mb-4">01</div>
+                    <h3 class="text-xl font-bold mb-2 text-charcoal">Ay 1-2: Hazırlık ve Canlanma</h3>
+                    <p class="text-xs font-bold text-gold uppercase tracking-widest mb-4">Temel Atma</p>
+                    <ul class="text-sm text-gray-600 space-y-3">
+                        <li>• <strong class="text-charcoal">Altyapı Kurulumu:</strong> Business Manager ve reklam hesaplarının 2026 standartlarına güncellenmesi.</li>
+                        <li>• <strong class="text-charcoal">Kitle Analizi:</strong> Takipçi kitlenizin analiz edilerek en verimli segmentlerin belirlenmesi.</li>
+                        <li>• <strong class="text-charcoal">Hatırlatma Kampanyası:</strong> "Biz Buradayız" iletişimi ile mevcut takipçilerle yeniden bağ kurma.</li>
+                    </ul>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="bg-white p-8 shadow-lg border-t-4 border-gold transition duration-300 transform md:-translate-y-4 rounded-sm">
+                    <div class="text-4xl font-serif text-gold mb-4">02</div>
+                    <h3 class="text-xl font-bold mb-2 text-charcoal">Ay 3-4: Etkileşim ve Büyüme</h3>
+                    <p class="text-xs font-bold text-gold uppercase tracking-widest mb-4">İvme Kazanma</p>
+                    <ul class="text-sm text-gray-600 space-y-3">
+                        <li>• <strong class="text-charcoal">Video Kurgu & Montaj:</strong> İlettiğiniz ham görüntülerin, trend müziklerle estetik Reels videolarına dönüştürülmesi.</li>
+                        <li>• <strong class="text-charcoal">İnteraktif Hikayeler:</strong> Anketler ve soru etiketleri ile takipçileri sohbete dahil etme.</li>
+                        <li>• <strong class="text-charcoal">Potansiyel Müşteri Reklamları:</strong> Bölgenizdeki nişanlı kitleye yönelik özel tanıtımlar.</li>
+                    </ul>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="bg-white p-8 shadow-lg border-t-4 border-gray-300 hover:border-gold transition duration-300 rounded-sm">
+                    <div class="text-4xl font-serif text-gold/30 mb-4">03</div>
+                    <h3 class="text-xl font-bold mb-2 text-charcoal">Ay 5-6: Sonuç ve Genişleme</h3>
+                    <p class="text-xs font-bold text-gold uppercase tracking-widest mb-4">Sürdürülebilirlik</p>
+                    <ul class="text-sm text-gray-600 space-y-3">
+                        <li>• <strong class="text-charcoal">Yeniden Hedefleme:</strong> İlgilenen ancak randevu almayanlara özel nazik hatırlatmalar.</li>
+                        <li>• <strong class="text-charcoal">Sosyal Kanıt:</strong> Memnun gelinlerimizin mutluluğunu paylaşarak güven tazeleme.</li>
+                        <li>• <strong class="text-charcoal">Marka Bilinirliği:</strong> Geniş kapsamlı gösterim reklamları ile akılda kalıcılık.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing & Package Details -->
+    <section id="fiyat" class="py-20 bg-charcoal text-white relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-gold/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+                
+                <!-- Package Description -->
+                <div class="lg:w-1/2">
+                    <span class="text-gold tracking-widest uppercase text-xs font-bold mb-2 block">CANSU HANIM'A ÖZEL TEKLİF</span>
+                    <h2 class="text-3xl md:text-5xl font-serif mb-6 leading-tight">Profesyonel Dijital <br>Yönetim Paketi</h2>
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        Ceramonixe kalitesinde, şeffaf, ölçülebilir ve tamamen markanıza özel kurgulanmış 360° yönetim hizmeti. Operasyonel yükü (DM cevaplama) ekibinize bırakırken, markanın dijital vitrinini ve stratejisini biz yönetiyoruz.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check text-gold"></i>
+                            <span class="text-sm text-gray-300">Meta Reklam Yönetimi & Optimizasyon</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check text-gold"></i>
+                            <span class="text-sm text-gray-300">İçerik Stratejisi & Kurgu (Çekim Hariç)</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check text-gold"></i>
+                            <span class="text-sm text-gray-300">Günlük Hesap Takibi</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check text-gold"></i>
+                            <span class="text-sm text-gray-300">Aylık Performans Raporu</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check text-gold"></i>
+                            <span class="text-sm text-gray-300">İçerik Önerileri Rehberi</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check text-gold"></i>
+                            <span class="text-sm text-gray-300">2026 Teknik Kurulumlar</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pricing Card -->
+                <div class="lg:w-1/3 w-full">
+                    <div class="bg-white text-charcoal p-8 rounded-lg shadow-2xl border-2 border-gold relative">
+                        <!-- Discount Badge -->
+                        <div class="absolute top-0 right-0 bg-gold text-white text-xs font-bold px-4 py-2 rounded-bl-lg uppercase tracking-wider">
+                            Fırsat
+                        </div>
+
+                        <div class="text-center mb-8 pt-4">
+                            <p class="text-gold text-sm font-bold uppercase tracking-wider mb-2">İlk 3 Ay İçin Özel Fiyat</p>
+                            <div class="flex items-center justify-center gap-1">
+                                <span class="text-5xl font-serif font-bold text-charcoal">30.000</span>
+                                <span class="text-xl text-gray-600 font-medium">TL</span>
+                                <span class="text-sm text-gray-400 ml-1">+ KDV</span>
+                            </div>
+                            <p class="text-gray-500 text-sm mt-2">/ Aylık Hizmet Bedeli</p>
+                        </div>
+
+                        <div class="space-y-4 mb-8">
+                            <div class="text-xs bg-gray-50 p-3 rounded text-gray-600 text-center">
+                                <i class="fas fa-info-circle text-gold mr-1"></i>
+                                Bu fiyata reklam bütçesi dahil değildir. Tüm fotoğraf/video içerikleri tarafınızdan sağlanır, ajans kurgu ve yönetim yapar.
+                            </div>
+                        </div>
+
+                        <!-- WhatsApp Action Button -->
+                        <a href="https://wa.me/905079448462?text=Merhaba%20Semanur%20Han%C4%B1m%2C%20Gelinlik%20Beyaz%20R%C3%BCya%20i%C3%A7in%20haz%C4%B1rlad%C4%B1%C4%9F%C4%B1n%C4%B1z%2030.000%20TL'lik%20teklifi%20onaylamak%20istiyorum." target="_blank" class="block w-full text-center py-4 bg-charcoal text-white font-bold uppercase tracking-widest hover:bg-gold transition duration-300 rounded shadow-lg">
+                            <i class="fab fa-whatsapp mr-2"></i> Anlaşmayı Başlat
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Calendar Preview -->
+    <section id="takvim" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-serif text-center mb-4">Haftalık İçerik Akışı Örneği</h2>
+            <p class="text-center text-gray-500 mb-12 text-sm max-w-2xl mx-auto">
+                Size özel hazırladığımız içerik rehberi ile haftalık planlamanız aşağıdaki gibi dengeli ve etkileşim odaklı olacaktır.
+            </p>
+            
+            <div class="overflow-x-auto pb-4">
+                <div class="min-w-[800px] grid grid-cols-7 gap-4">
+                    <!-- Days -->
+                    <div class="text-center font-bold text-gold uppercase text-xs">Pazartesi</div>
+                    <div class="text-center font-bold text-gold uppercase text-xs">Salı</div>
+                    <div class="text-center font-bold text-gold uppercase text-xs">Çarşamba</div>
+                    <div class="text-center font-bold text-gold uppercase text-xs">Perşembe</div>
+                    <div class="text-center font-bold text-gold uppercase text-xs">Cuma</div>
+                    <div class="text-center font-bold text-gold uppercase text-xs">Cumartesi</div>
+                    <div class="text-center font-bold text-gold uppercase text-xs">Pazar</div>
+
+                    <!-- Content Cards -->
+                    <div class="bg-gray-50 p-3 border-t-2 border-charcoal h-32 flex flex-col justify-between rounded hover:shadow-md transition">
+                        <span class="text-[9px] bg-charcoal text-white px-2 py-0.5 rounded w-max">Reels</span>
+                        <p class="text-xs font-semibold">Detay Videosu</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-3 border-t-2 border-gold h-32 flex flex-col justify-between rounded hover:shadow-md transition">
+                        <span class="text-[9px] bg-gold text-white px-2 py-0.5 rounded w-max">Story</span>
+                        <p class="text-xs font-semibold">Anket Etkileşimi</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-3 border-t-2 border-charcoal h-32 flex flex-col justify-between rounded hover:shadow-md transition">
+                        <span class="text-[9px] bg-gray-400 text-white px-2 py-0.5 rounded w-max">Post</span>
+                        <p class="text-xs font-semibold">Seçim Rehberi</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-3 border-t-2 border-charcoal h-32 flex flex-col justify-between rounded hover:shadow-md transition">
+                        <span class="text-[9px] bg-charcoal text-white px-2 py-0.5 rounded w-max">Reels</span>
+                        <p class="text-xs font-semibold">Backstage / Proba</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-3 border-t-2 border-gold h-32 flex flex-col justify-between rounded hover:shadow-md transition">
+                        <span class="text-[9px] bg-gold text-white px-2 py-0.5 rounded w-max">Story</span>
+                        <p class="text-xs font-semibold">Soru & Cevap</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-3 border-t-2 border-charcoal h-32 flex flex-col justify-between rounded hover:shadow-md transition">
+                        <span class="text-[9px] bg-gray-400 text-white px-2 py-0.5 rounded w-max">Fotoğraf</span>
+                        <p class="text-xs font-semibold">Haftanın Yıldızı</p>
+                    </div>
+
+                    <div class="bg-white p-3 h-32 flex flex-col justify-center items-center text-gray-400 border border-dashed border-gray-300 rounded">
+                        <span class="text-[10px]">Serbest Akış</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Work With Me Section -->
+    <section class="py-20 bg-cream relative overflow-hidden border-t border-gold/10">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-gold tracking-widest uppercase text-xs font-bold mb-2 block">FARKLILIKLARIMIZ</span>
+                <h2 class="text-3xl md:text-4xl font-serif text-charcoal">Neden Benimle Çalışmalısınız?</h2>
+                <div class="w-24 h-1 bg-gold mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 group border border-gray-100">
+                    <div class="w-16 h-16 bg-charcoal text-gold rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold group-hover:text-white transition duration-300 shadow-lg">
+                        <i class="fas fa-gem text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-charcoal">Butik & Özel İlgi</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Büyük ajanslarda "yüzlerce müşteriden biri" olmazsınız. Markanızı kendi markam gibi sahiplenir, her detayıyla bizzat ilgilenirim. Başarınız, benim en değerli referansımdır.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 group border border-gray-100 transform md:-translate-y-4">
+                    <div class="w-16 h-16 bg-charcoal text-gold rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold group-hover:text-white transition duration-300 shadow-lg">
+                        <i class="fas fa-palette text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-charcoal">Tasarım & Strateji Bir Arada</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Sadece bir reklamcı değilim; Görsel İletişim Tasarımı uzmanıyım. Markanızın sadece "görünmesini" değil, "en estetik ve kurumsal" haliyle akıllara kazınmasını sağlarım.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 group border border-gray-100">
+                    <div class="w-16 h-16 bg-charcoal text-gold rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold group-hover:text-white transition duration-300 shadow-lg">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-charcoal">Şeffaf & Veri Odaklılık</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        "Reklam verdik bitti" anlayışıyla değil, verilerle çalışırım. Haftalık analizler ve anlaşılır raporlarla bütçenizin nereye gittiğini ve size ne kazandırdığını net görürsünüz.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Footer -->
+    <footer id="contact" class="bg-white border-t border-gray-100 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-2xl font-serif text-charcoal mb-8">Gelinlik Beyaz Rüya'yı Birlikte Büyütelim</h3>
+            <div class="flex flex-col md:flex-row justify-center gap-4 text-sm mb-12">
+                <!-- WhatsApp Action Buttons -->
+                <a href="https://wa.me/905079448462?text=Merhaba%20Semanur%20Han%C4%B1m%2C%20teklifi%20okudum%20ve%20onayl%C4%B1yorum%2C%20s%C3%BCreci%20ba%C5%9Flatal%C4%B1m." target="_blank" class="px-8 py-3 bg-charcoal text-white rounded hover:bg-gold transition flex items-center justify-center">
+                    <i class="fab fa-whatsapp mr-2"></i>Teklifi Onayla
+                </a>
+                <a href="https://wa.me/905079448462?text=Merhaba%20Semanur%20Han%C4%B1m%2C%20teklif%20hakk%C4%B1nda%20baz%C4%B1%20sorular%C4%B1m%20var%2C%20g%C3%B6r%C3%BC%C5%9Febilir%20miyiz%3F" target="_blank" class="px-8 py-3 border border-gray-300 text-charcoal rounded hover:border-charcoal transition flex items-center justify-center">
+                    <i class="fab fa-whatsapp mr-2"></i>Sorularınız İçin Arayın
+                </a>
+            </div>
+            
+            <div class="border-t border-gray-100 pt-8 mt-8">
+                 <p class="text-sm text-gray-500 font-medium">Bu teklif dijital dönüşüm ve görsel iletişim tasarımı uzmanı <span class="text-gold font-bold">Semanur Ayyıldız</span> tarafından hazırlanmıştır.</p>
+                 <p class="mt-2 text-xs text-gray-400">© 2026 Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+
+                // If mobile menu is open, close it after clicking a link
+                if(!mobileMenu.classList.contains('hidden')){
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                }
+            });
+        });
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        btn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            
+            // Toggle Icon
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            }
+        });
+    </script>
+</body>
+</html>
